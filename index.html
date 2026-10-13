@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+  <meta name="theme-color" content="#062b49">
+  <meta name="description" content="絵文字で遊ぶオフライン深海ハンティングPOC">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <title>Deep Sea Hunter</title>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div><p class="eyebrow">OFFLINE EMOJI POC</p><h1>🌊 DEEP SEA HUNTER</h1></div>
+      <button id="installBtn" class="small-btn" hidden>＋ アプリ追加</button>
+    </header>
+    <section class="stats" aria-label="ゲーム情報">
+      <div><span>スコア</span><strong id="score">0</strong></div>
+      <div><span>捕獲数</span><strong id="caught">0</strong></div>
+      <div><span>図鑑</span><strong id="discovered">0 / 8</strong></div>
+    </section>
+    <section class="game-wrap" aria-label="ゲーム画面">
+      <div id="game" role="application" aria-label="魚を狙ってモリを撃つゲーム"></div>
+      <div class="hint" id="hint">魚に向かって引っ張り、指を離そう！</div>
+    </section>
+    <nav class="actions" aria-label="ゲーム操作">
+      <button id="playBtn" class="primary">🎯 あそぶ</button>
+      <button id="bookBtn">📖 図鑑</button>
+      <button id="resetBtn" class="quiet">↻ リセット</button>
+    </nav>
+    <section id="book" class="book" hidden>
+      <div class="section-heading"><h2>📖 深海図鑑</h2><button id="closeBook" aria-label="図鑑を閉じる">閉じる ✕</button></div>
+      <p class="muted">見つけた生き物が記録されるよ。記録はこの端末に保存されます。</p>
+      <div id="bookGrid" class="book-grid"></div>
+    </section>
+    <footer>📱 オフライン対応 · データはこの端末内に保存</footer>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.3/lib/p5.min.js" defer></script>
+  <script src="game.js" defer></script>
+</body>
+</html>
