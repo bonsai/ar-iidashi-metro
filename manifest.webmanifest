@@ -1,0 +1,15 @@
+{
+  "name": "Deep Sea Hunter",
+  "short_name": "深海ハンター",
+  "description": "絵文字で遊ぶオフライン深海ハンティング",
+  "lang": "ja",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#041727",
+  "theme_color": "#062b49",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
